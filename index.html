@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="sc1">
+  <div class="filter-bar">
+    <select id="category" onchange="filterProducts()">
+      <option value="all">Categories</option>
+      <option value="aglaonema">Aglaonema</option>
+      <option value="ferns">Ferns</option>
+      <option value="calathea">Calathea</option>
+    </select>
+
+    <select id="price" onchange="filterProducts()">
+      <option value="all">Prices</option>
+      <option value="low">Below $50</option>
+      <option value="medium">$50 - $100</option>
+      <option value="high">Above $100</option>
+    </select>
+  </div>
+
+  <div class="product-grid" id="product-grid">
+    <!-- Example product cards -->
+    <div class="product-card" data-category="aglaonema" data-price="35" onclick="openModal('Aglaonema Crete', '$35', 'plant1.jpg')">
+      <img src="plant1.jpg" alt="Aglaonema Crete">
+      <div class="product-name">Aglaonema Crete</div>
+      <div class="product-price">$35.00</div>
+    </div>
+    <div class="product-card" data-category="aglaonema" data-price="70" onclick="openModal('Aglaonema Stripes', '$70', 'plant1.jpg')">
+      <img src="plant1.jpg" alt="Aglaonema Stripes">
+      <div class="product-name">Aglaonema Stripes</div>
+      <div>
+        <span class="product-discount">$100.00</span>
+        <span class="product-price">$70.00</span>
+      </div>
+    </div>
+    <div class="product-card" data-category="ferns" data-price="215" onclick="openModal('Blue Star Fern', '$215', 'plant1.jpg')">
+      <img src="plant1.jpg" alt="Blue Star Fern">
+      <div class="product-name">Blue Star Fern</div>
+      <div class="product-price">$215.00</div>
+    </div>
+    <div class="product-card" data-category="calathea" data-price="50" onclick="openModal('Calathea Lancifolia', '$50', 'plant1.jpg')">
+      <img src="plant1.jpg" alt="Calathea Lancifolia">
+      <div class="product-name">Calathea Lancifolia</div>
+      <div class="product-price">$50.00</div>
+    </div>
+    <div class="product-card" data-category="aglaonema" data-price="35" onclick="openModal('Aglaonema Crete', '$35', 'plant1.jpg')">
+        <img src="plant1.jpg" alt="Aglaonema Crete">
+        <div class="product-name">Aglaonema Crete</div>
+        <div class="product-price">$35.00</div>
+      </div>
+      <div class="product-card" data-category="aglaonema" data-price="70" onclick="openModal('Aglaonema Stripes', '$70', 'plant1.jpg')">
+        <img src="plant1.jpg" alt="Aglaonema Stripes">
+        <div class="product-name">Aglaonema Stripes</div>
+        <div>
+          <span class="product-discount">$100.00</span>
+          <span class="product-price">$70.00</span>
+        </div>
+      </div>
+      <div class="product-card" data-category="ferns" data-price="215" onclick="openModal('Blue Star Fern', '$215', 'plant1.jpg')">
+        <img src="plant1.jpg" alt="Blue Star Fern">
+        <div class="product-name">Blue Star Fern</div>
+        <div class="product-price">$215.00</div>
+      </div>
+      <div class="product-card" data-category="calathea" data-price="50" onclick="openModal('Calathea Lancifolia', '$50', 'plant1.jpg')">
+        <img src="plant1.jpg" alt="Calathea Lancifolia">
+        <div class="product-name">Calathea Lancifolia</div>
+        <div class="product-price">$50.00</div>
+      </div>
+      <div class="product-card" data-category="aglaonema" data-price="35" onclick="openModal('Aglaonema Crete', '$35', 'plant1.jpg')">
+        <img src="plant1.jpg" alt="Aglaonema Crete">
+        <div class="product-name">Aglaonema Crete</div>
+        <div class="product-price">$35.00</div>
+      </div>
+      <div class="product-card" data-category="aglaonema" data-price="70" onclick="openModal('Aglaonema Stripes', '$70', 'plant1.jpg')">
+        <img src="plant1.jpg" alt="Aglaonema Stripes">
+        <div class="product-name">Aglaonema Stripes</div>
+        <div>
+          <span class="product-discount">$100.00</span>
+          <span class="product-price">$70.00</span>
+        </div>
+      </div>
+      <div class="product-card" data-category="ferns" data-price="215" onclick="openModal('Blue Star Fern', '$215', 'plant1.jpg')">
+        <img src="plant1.jpg" alt="Blue Star Fern">
+        <div class="product-name">Blue Star Fern</div>
+        <div class="product-price">$215.00</div>
+      </div>
+      <div class="product-card" data-category="calathea" data-price="50" onclick="openModal('Calathea Lancifolia', '$50', 'plant1.jpg')">
+        <img src="plant1.jpg" alt="Calathea Lancifolia">
+        <div class="product-name">Calathea Lancifolia</div>
+        <div class="product-price">$50.00</div>
+      </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <img id="modal-image" src="" alt="">
+      <h2 id="modal-title"></h2>
+      <p id="modal-price"></p>
+    </div>
+    <button class="close-btn" onclick="closeModal()">X</button>
+  </div>
+</section>
+    <script src="script.js"></script>
+</body>
+</html>
