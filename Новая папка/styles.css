@@ -1,102 +1,21 @@
+/* Основные стили */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
-.filter-bar {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-.sc1 {
-  width: 70%;
-  margin-left: 15%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-select {
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-}
-.product-card {
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-.product-card:hover {
-  transform: scale(1.05);
-}
-.product-card img {
-  max-width: 100%;
-}
-.product-name {
-  font-weight: bold;
-  margin: 10px 0;
-}
-.product-price {
-  color: #28a745;
-}
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-.modal-content {
-  background-color: white;
-  padding: 20px;
-  width: 1000px;
-  height: 600px;
-  text-align: center;
-}
-.modal-content img {
-  max-width: 20%;
-}
-.close-btn {
-  position: absolute;
-  top: 8%;
-  left: 82.5%;
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.buy-btn{
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  padding: 13px 20px;
-  background-color: #28a745;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
+/* Шапка сайта */
 header {
-  background-image: src("rec");
-  padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav {
@@ -136,7 +55,7 @@ nav {
 
 /* Главный раздел */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('header_bg.png');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/herbs-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -203,6 +122,7 @@ nav {
 
 .herb-card {
     background: white;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s;
@@ -269,6 +189,3 @@ footer {
         font-size: 1rem;
     }
 }
-
-
-
